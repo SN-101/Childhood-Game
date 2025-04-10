@@ -15,6 +15,7 @@ let scoreP = 0;
 let scoreC = 0;
 YScore.innerHTML = 0;
 CScore.innerHTML = 0;
+
 // const rock = "rock";
 // const paper = "paper";
 // const scissors = "scissors";
@@ -27,6 +28,7 @@ CScore.innerHTML = 0;
 // ScissorsBtn.addEventListener("click", function () {
 //     playerChoose = ScissorsBtn.id;
 // })
+
 document.querySelectorAll("button").forEach(button => {
     button.addEventListener("click", function () {
         playerChoose = this.id;
@@ -44,11 +46,12 @@ function playerwin() {
     if (playerChoose == "rock" && robotChoose == "scissors" || playerChoose == "scissors" && robotChoose == "paper" || playerChoose == "paper" && robotChoose == "rock") {
         scoreP++;
         YScore.innerHTML = scoreP;
-        Kill.innerHTML = `player win, ${playerChoose} beats  ${robotChoose}`;
+        Kill.innerHTML = `Player win, ${playerChoose} beats  ${robotChoose}`;
         if (scoreP == 3) {
             play.style.display="none";
             again.style.display="flex";
-            won.innerHTML ="player has won the game!";
+            won.innerHTML ="Player has won the game!";
+            won.style.color="#0ff"
         }
     }
 }
@@ -56,11 +59,12 @@ function computerwin() {
     if (playerChoose == "scissors" && robotChoose == "rock" || playerChoose == "paper" && robotChoose == "scissors" || playerChoose == "rock" && robotChoose == "paper") {
         scoreC++;
         CScore.innerHTML = scoreC;
-        Kill.innerHTML = `computer win, ${robotChoose} beats  ${playerChoose}`;
+        Kill.innerHTML = `Computer win, ${robotChoose} beats  ${playerChoose}`;
         if (scoreC == 3) {
             play.style.display = "none";
             again.style.display = "flex";
             won.innerHTML ="Computer has won the game!";
+            won.style.color="red"
         }
     }
 }

@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #c0c0c0;
+  background-color: #f0f8ff;
 }
 
 header {
@@ -14,27 +14,30 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  color: #fff;
+  color: #000;
 }
 
 header details {
-  background-color: #fff;
-  color: #000;
+  background-color: #3a3a3a;
+  color: #fff;
   margin: 10px;
   width: 500px;
   padding: 20px;
   justify-items: center;
+  border-radius: 20px;
 }
 
 details summary {
   margin: 10px 0;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .scores {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  
 }
 
 section {
@@ -44,7 +47,6 @@ section {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  color: #fff;
 }
 
 .choose {
@@ -54,12 +56,20 @@ section {
 }
 
 button {
+  background-color: #90f7f0;
+  border-radius: 20px;
+  font-weight: 700;
+  border: none;
   padding: 1px 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+button:hover{
+  background-color: #5cfff4;
 }
 
 
