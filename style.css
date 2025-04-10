@@ -46,7 +46,7 @@ details summary {
 }
 
 .scores p span{
-  font-weight: 500;
+  font-weight: 700;
 }
 
 section {
@@ -79,6 +79,8 @@ button {
 
 button:hover{
   background-color: #5cfff4;
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 

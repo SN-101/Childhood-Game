@@ -52,7 +52,7 @@ function playerwin() {
         if (scoreP == 3) {
             play.style.display = "none";
             again.style.display = "flex";
-            won.innerHTML = "Player has won the game!";
+            won.innerHTML = "You have won the game! 💪🎉";
             won.style.color = "green"
         }
     }
@@ -65,7 +65,7 @@ function computerwin() {
         if (scoreC == 3) {
             play.style.display = "none";
             again.style.display = "flex";
-            won.innerHTML = "Computer has won the game!";
+            won.innerHTML = "Computer has won the game! 💀";
             won.style.color = "red"
         }
     }
