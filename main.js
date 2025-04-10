@@ -78,6 +78,9 @@ function tie() {
         Ybg.style.backgroundColor = "green"
     } else if (scoreP < scoreC) {
         Cbg.style.backgroundColor = "red"
+    }else{
+        Ybg.style.backgroundColor = ""
+        Cbg.style.backgroundColor = ""
     }
     
 }
