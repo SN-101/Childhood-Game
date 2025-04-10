@@ -5,10 +5,12 @@ const PaperBtn = document.getElementById("paper");
 const ScissorsBtn = document.getElementById("scissors");
 const Kill = document.getElementById("kill");
 const RPS = ["rock", "paper", "scissors"];
-const play=document.getElementById("play");
-const again=document.getElementById("again");
-const won=document.getElementById("won");
-const playAgain=document.getElementById("play-again");
+const play = document.getElementById("play");
+const again = document.getElementById("again");
+const won = document.getElementById("won");
+const playAgain = document.getElementById("play-again");
+const Ybg = document.getElementById("Ybgp");
+const Cbg = document.getElementById("Cbgp");
 let playerChoose = null;
 let robotChoose;
 let scoreP = 0;
@@ -48,10 +50,10 @@ function playerwin() {
         YScore.innerHTML = scoreP;
         Kill.innerHTML = `Player win, ${playerChoose} beats  ${robotChoose}`;
         if (scoreP == 3) {
-            play.style.display="none";
-            again.style.display="flex";
-            won.innerHTML ="Player has won the game!";
-            won.style.color="#0ff"
+            play.style.display = "none";
+            again.style.display = "flex";
+            won.innerHTML = "Player has won the game!";
+            won.style.color = "green"
         }
     }
 }
@@ -63,8 +65,8 @@ function computerwin() {
         if (scoreC == 3) {
             play.style.display = "none";
             again.style.display = "flex";
-            won.innerHTML ="Computer has won the game!";
-            won.style.color="red"
+            won.innerHTML = "Computer has won the game!";
+            won.style.color = "red"
         }
     }
 }
@@ -72,15 +74,24 @@ function tie() {
     if (playerChoose == robotChoose) {
         Kill.innerHTML = `It's a tie! Both chose ${robotChoose}`;
     }
+    if (scoreP > scoreC) {
+        Ybg.style.backgroundColor = "green"
+    } else if (scoreP < scoreC) {
+        Cbg.style.backgroundColor = "red"
+    }
+    
 }
-function PlayAgain(){
-    scoreC=0;
-    scoreP=0;
+
+function PlayAgain() {
+    scoreC = 0;
+    scoreP = 0;
     CScore.innerHTML = scoreC;
     YScore.innerHTML = scoreP;
     play.style.display = "flex";
     again.style.display = "none";
-    Kill.innerHTML ="";
+    Kill.innerHTML = "";
+    Ybg.style.backgroundColor = ""
+    Cbg.style.backgroundColor = ""
 }
 
 

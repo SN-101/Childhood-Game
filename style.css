@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: cursive;
 }
 
 body {
@@ -37,7 +38,15 @@ details summary {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  
+}
+
+.scores p{
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.scores p span{
+  font-weight: 500;
 }
 
 section {
